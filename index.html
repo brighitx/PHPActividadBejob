@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Acceso a p&aacute;gina web</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <div class="contenedor-formulario">
+        <h1>Formulario de registro</h1>
+        <form id="formulario" method="POST" action="registro.php">
+            <label for="nombre">Nombre <span><em>(requerido)</em></span></label>
+            <input id="nombre" type="text" name="nombre" pattern='[A-Za-zÀ-ÿ]+' required/>
+            <span id="errorNombre" style="display: none;"></span>
+            <label for="apellido">Apellido <span><em>(requerido)</em></span></label>
+            <input id="apellido" type="text" name="apellido" pattern='[A-Za-zÀ-ÿ]+' required/>
+            <span id="errorApellido" style="display: none;"></span>
+            <label for="email">Email <span><em>(requerido)</em></span></label>
+            <input id="email" type="email" name="email" pattern='^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$' required/>
+            <span id="errorEmail" style="display: none;"></span>
+            <input type="submit" name="submit" value="Subscribirse"/>
+        </form>
+    </div>
+  <script src="validacion.js" charset="utf-8"></script>
+</body>
+</html>
